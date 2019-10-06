@@ -1,0 +1,8 @@
+Regras que devem ser seguidas no processo de especificação dos requisitos:
+- Evitar frases grandes;
+- Definir apenas um requisito por vez;
+- Evitar frases como necessariamente, entretanto, mas, etc.
+
+A nomenclatura dos requisitos seguirá a seguinte regra::
+- RF[XXX]: Requisito Funcional número XXX;
+- RNF[XXX]: Requisito Não Funcional número XXX.
