@@ -1,0 +1,10 @@
+1) Identar o código;
+2) Nomear variáveis de maneira intuitiva;
+3) Evitar chamar funções para testes em loops;
+4) Evitar condição de negação no if;
+5) Nomear funções de maneira intuitiva;
+6) Comentar o código;
+7) Padronizar nome das constantes;
+8) Utilizar tratamento de erro (try/catch);
+9) Não usar valor padrão em argumentos de funções;
+10) Percorrer loops somente o necessário.
