@@ -5,3 +5,16 @@ O sistema faz o controle da Imobiliária JLS. O gerente da imobiliária pode cad
 No sistema, as seguintes informações dos imóveis são armazenadas: tipo do imóvel (casa ou apartamento), endereço, proprietário e valor de aluguel. Para os proprietários, as seguintes informações são armazenadas: nome, CPF, telefone de contato e imóveis cuja propriedade são deles. Para os inquilinos, as seguintes informações são armazenadas: nome, CPF, telefone de contato e imóvel que alugou.
 # Tecnologias Utilizadas
 Nesse projeto, foi utilizado, para o front-end, HTML e CSS e, para o back-end, PHP. Para o banco de dados, foi utilizado MariaBD. Para isso, foi utilizado o XAMPP. O projeto está na versão X.
+## Regras de pastas
+```
+gerenciadorJLS
+  -> docs
+    -> documento-requisitos.pdf
+    -> diagrama-classe.png
+    -> diagrama-sequencia.png
+  -> src
+    -> view
+    -> controller
+    -> model
+    -> persistence
+```
