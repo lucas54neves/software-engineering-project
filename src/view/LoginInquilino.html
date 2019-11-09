@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="#">
+        <title>Login de Inquilino</title>
+    </head>
+    <body>
+      <h1>Login do Inquilino</h1>
+      <form action="action_page.php" method="post">
+        <div class="imgcontainer">
+          <img src="#" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="nome_usuario"><b>Nome de usuário</b></label><br>
+          <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+          <label for="senha"><b>Senha</b></label><br>
+          <input type="password" placeholder="Enter Password" name="psw" required><br>
+
+          <button type="submit">Entrar</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Lembrar-me
+          </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn">Cancelar</button><br>
+          <span class="psw">Esqueceu a <a href="#">senha?</a></span><br>
+        </div>
+      </form>
+    </body>
+</html>
