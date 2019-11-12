@@ -6,7 +6,7 @@
         <title>Cadastro de Cliente</title>
     </head>
     <body>
-      <form action="action_page.php" style="border:1px solid #ccc">
+      <form action="../controller/CadastrarCliente.php" method="post" style="border:1px solid #ccc">
         <div class="container">
           <h1>Cadastro de Cliente</h1>
           <p>Preencha esse formulário para criar uma conta de cliente.</p>
@@ -20,10 +20,10 @@
           <input type="text" placeholder="Entre com o CPF" name="cpf" required><br>
 
           <label for="nascimento"><b>Nascimento</b></label>
-          <input type="date" placeholder="Entre com o Nascimento" name="nascimento" required><br>
+          <input type="date" name="nascimento" required><br>
 
           <label for="renda"><b>Renda</b></label>
-          <input type="text" placeholder="Entre com o Nascimento" name="renda" required><br>
+          <input type="text" placeholder="Entre com a renda" name="renda" required><br>
 
           <hr>
 
