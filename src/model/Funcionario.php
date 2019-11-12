@@ -7,19 +7,19 @@
         function __construct($nome, $cpf, $nascimento) {
             $this->nome = $nome;
             $this->cpf = $cpf;
-            $this->$nascimento = $$nascimento;
+            $this->nascimento = $nascimento;
         }
 
         function getNome() {
             return $this->nome;
         }
 
-        function getNumero() {
+        function getCpf() {
             return $this->cpf;
         }
 
         function getNascimento() {
-            return $this->$nascimento;
+            return $this->nascimento;
         }
     }
 ?>
