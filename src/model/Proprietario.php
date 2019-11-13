@@ -14,7 +14,7 @@
             return $this->nome;
         }
 
-        function getNumero() {
+        function getCpf() {
             return $this->cpf;
         }
 
