@@ -14,5 +14,11 @@
                 echo "Erro ao cadastrar o proprietario: <br>".$conexao->error;
             }
         }
+
+        function consultarCPF($cpf, $conexao) {
+            $sql = "SELECT * FROM `proprietario` WHERE cpf = ".$cpf;
+            $resultado = $conexao->query($sql);
+            return $resultado;
+        }
     }
  ?>
