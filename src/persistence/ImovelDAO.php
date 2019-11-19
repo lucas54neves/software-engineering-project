@@ -16,6 +16,16 @@
                 echo "Erro ao cadastrar o imovel: <br>".$conexao->error;
             }
         }
+
+        function consultarCPF($cpf, $conexao) {
+            $sql =
+                "SELECT i.idImovel, i.aluguel, i.logradouro, i.numero, i.bairro
+                    FROM imovel AS i
+                        INNER JOIN inquilino AS inq
+                        ON inq.imovelAlugado = i.idImovel AND inq.cpf = ".$cpf;
+            $resultado = $conexao->query($sql);
+            return $resultado;
+        }
     }
 
  ?>
