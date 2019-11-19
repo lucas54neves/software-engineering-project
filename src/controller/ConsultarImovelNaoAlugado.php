@@ -2,13 +2,11 @@
     include_once '../persistence/Connection.php';
     include_once '../persistence/ImovelDAO.php';
 
-    $bairro = $_POST['bairro'];
-
     $conexao = new Connection();
     $conexao = $conexao->getConnection();
 
     $imovelDAO = new ImovelDAO();
-    $resultado = $imovelDAO->consultarBairro($bairro, $conexao);
+    $resultado = $imovelDAO->consultarNaoAlugado($conexao);
 
     if ($resultado->num_rows > 0) {
         echo "
@@ -36,6 +34,6 @@
 
         echo "</table>";
     } else {
-        echo "<script>alert('Não tem imóvel desse bairro cadastrado')</script>";
+        echo "<script>alert('Todos os imóveis foram alugados')</script>";
     }
 ?>

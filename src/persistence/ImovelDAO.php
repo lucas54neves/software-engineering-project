@@ -33,6 +33,12 @@
             $resultado = $conexao->query($sql);
             return $resultado;
         }
+
+        function consultarNaoAlugado($conexao) {
+            $sql = "SELECT * FROM imovel WHERE idImovel NOT IN (SELECT imovelAlugado FROM inquilino)";
+            $resultado = $conexao->query($sql);
+            return $resultado;
+        }
     }
 
  ?>
