@@ -17,6 +17,12 @@
                 echo "Erro ao cadastrar o inquilino: <br>".$conexao->error;
             }
         }
+
+        function consultarCPF($cpf, $conexao) {
+            $sql = "SELECT * FROM `inquilino` WHERE cpf = ".$cpf;
+            $resultado = $conexao->query($sql);
+            return $resultado;
+        }
     }
 
  ?>
