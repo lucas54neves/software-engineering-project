@@ -6,52 +6,45 @@
         <title>Cadastro de Imóvel</title>
     </head>
     <body>
-      <form action="../controller/CadastrarImovel.php" method="post" style="border:1px solid #ccc">
-        <div class="container">
-          <h1>Cadastro de Imóvel</h1>
-          <p>Preencha esse formulário para cadastrar um imóvel.</p>
+        <form action="../controller/CadastrarImovel.php" method="post" style="border:1px solid #ccc">
+            <h1>Cadastro de Imóvel</h1>
+            <p>Preencha esse formulário para cadastrar um imóvel.</p>
+            <fieldset>
+                <label for="idImovel"><b>Identificador do Imóvel</b></label>
+                <input type="text" placeholder="Entre com o identificador" name="idImovel" required><br>
 
-          <hr>
+                <label for="cpfProprietario"><b>CPF do Proprietário</b></label>
+                <input type="text" placeholder="Entre com o identificador" name="cpfProprietario" required><br>
 
-          <label for="logradouro"><b>Logradouro</b></label>
-          <input type="text" placeholder="Entre com o logradouro" name="logradouro" required><br>
+                <label for="logradouro"><b>Logradouro</b></label>
+                <input type="text" placeholder="Entre com o logradouro" name="logradouro" required><br>
 
-          <label for="numero"><b>Número</b></label>
-          <input type="text" placeholder="Entre com o numero" name="numero" required><br>
+                <label for="numero"><b>Número</b></label>
+                <input type="text" placeholder="Entre com o numero" name="numero" required><br>
 
-          <label for="bairro"><b>Bairro</b></label>
-          <input type="text" placeholder="Entre com o bairro" name="bairro" required><br>
+                <label for="bairro"><b>Bairro</b></label>
+                <input type="text" placeholder="Entre com o bairro" name="bairro" required><br>
 
-          <label for="aluguel"><b>Aluguel</b></label>
-          <input type="text" placeholder="Entre com o aluguel" name="aluguel" required><br>
+                <label for="aluguel"><b>Aluguel</b></label>
+                <input type="text" placeholder="Entre com o aluguel" name="aluguel" required><br>
+            </fieldset>
+            <fieldset>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Entre com o email" name="email" required><br>
 
-          <label for="idImovel"><b>Identificador do Imóvel</b></label>
-          <input type="text" placeholder="Entre com o identificador" name="idImovel" required><br>
+                <label for="senha"><b>Senha</b></label>
+                <input type="password" placeholder="Entre com a senha" name="senha" required><br>
 
-          <hr>
+                <label for="confirmacaoSenha"><b>Confirmação de senha</b></label>
+                <input type="password" placeholder="Confirmação de senha" name="confirmacaoSenha" required><br>
 
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Entre com o email" name="email" required><br>
-
-          <label for="senha"><b>Senha</b></label>
-          <input type="password" placeholder="Entre com a senha" name="senha" required><br>
-
-          <label for="confirmacaoSenha"><b>Confirmação de senha</b></label>
-          <input type="password" placeholder="Confirmação de senha" name="confirmacaoSenha" required><br>
-
-          <label>
-            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar-me
-          </label>
-
-          <hr>
-
-          <p>Criando uma conta você concorda com nossa <a href="#" style="color:dodgerblue">política de privacidade</a>.</p>
-
-          <div class="clearfix">
-            <button type="button" class="cancelbtn">Cancelar</button>
-            <button type="submit" class="signupbtn">Registrar</button>
-          </div>
-        </div>
-      </form>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar-me
+            </fieldset>
+            <fieldset>
+                <p>Criando uma conta você concorda com nossa <a href="#" style="color:dodgerblue">política de privacidade</a>.</p>
+                <button type="button" class="cancelbtn">Cancelar</button>
+                <button type="submit" class="signupbtn">Registrar</button>
+            </fieldset>
+        </form>
     </body>
 </html>

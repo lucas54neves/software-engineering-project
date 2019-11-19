@@ -1,17 +1,27 @@
 <?php
     class Imovel {
+        private $idImovel;
+        private $cpfProprietario;
         private $logradouro;
         private $numero;
         private $bairro;
         private $aluguel;
-        private $idImovel;
 
-        function __construct($logradouro, $numero, $bairro, $aluguel, $idImovel) {
+        function __construct($idImovel, $cpfProprietario, $logradouro, $numero, $bairro, $aluguel) {
+            $this->idImovel = $idImovel;
+            $this->cpfProprietario = $cpfProprietario;
             $this->logradouro = $logradouro;
             $this->numero = $numero;
             $this->bairro = $bairro;
             $this->aluguel = $aluguel;
-            $this->idImovel = $idImovel;
+        }
+
+        function getIdImovel() {
+            return $this->idImovel;
+        }
+
+        function getCpfProprietario() {
+            return $this->cpfProprietario;
         }
 
         function getLogradouro() {
@@ -28,10 +38,6 @@
 
         function getAluguel() {
             return $this->aluguel;
-        }
-
-        function getIdImovel() {
-            return $this->idImovel;
         }
     }
 ?>

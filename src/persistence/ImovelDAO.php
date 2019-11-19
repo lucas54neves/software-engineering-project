@@ -3,11 +3,12 @@
         function __construct() {}
 
         function salvar($imovel, $conexao) {
-            $sql = "INSERT INTO `imovel`(`logradouro`, `numero`, `bairro`, `idImovel`, `aluguel`) VALUES ('".
+            $sql = "INSERT INTO `imovel`(`idImovel`, `cpfProprietario`, `logradouro`, `numero`, `bairro`, `aluguel`) VALUES ('".
+                $imovel->getIdImovel()."','".
+                $imovel->getCpfProprietario()."','".
                 $imovel->getLogradouro()."','".
                 $imovel->getNumero()."','".
-                $imovel->getBairro()."','".
-                $imovel->getIdImovel()."',".
+                $imovel->getBairro()."',".
                 $imovel->getAluguel().")";
 
             if ($conexao->query($sql) == TRUE) {
