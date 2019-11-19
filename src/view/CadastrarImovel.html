@@ -6,7 +6,7 @@
         <title>Cadastro de Imóvel</title>
     </head>
     <body>
-      <form action="action_page.php" style="border:1px solid #ccc">
+      <form action="../controller/CadastrarImovel.php" method="post" style="border:1px solid #ccc">
         <div class="container">
           <h1>Cadastro de Imóvel</h1>
           <p>Preencha esse formulário para cadastrar um imóvel.</p>
@@ -24,6 +24,9 @@
 
           <label for="aluguel"><b>Aluguel</b></label>
           <input type="text" placeholder="Entre com o aluguel" name="aluguel" required><br>
+
+          <label for="idImovel"><b>Identificador do Imóvel</b></label>
+          <input type="text" placeholder="Entre com o identificador" name="idImovel" required><br>
 
           <hr>
 

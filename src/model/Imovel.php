@@ -4,12 +4,14 @@
         private $numero;
         private $bairro;
         private $aluguel;
+        private $idImovel;
 
-        function __construct($logradouro, $numero, $bairro, $aluguel) {
+        function __construct($logradouro, $numero, $bairro, $aluguel, $idImovel) {
             $this->logradouro = $logradouro;
             $this->numero = $numero;
             $this->bairro = $bairro;
             $this->aluguel = $aluguel;
+            $this->idImovel = $idImovel;
         }
 
         function getLogradouro() {
@@ -26,6 +28,10 @@
 
         function getAluguel() {
             return $this->aluguel;
+        }
+
+        function getIdImovel() {
+            return $this->idImovel;
         }
     }
 ?>
