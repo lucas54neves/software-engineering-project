@@ -1,4 +1,8 @@
 # software-engineering-project
+<p align="center">
+  <img src="src/images/logo.png" width="170" height="170" align="center" />
+</p>
+
 Repositório para o projeto final da disciplina de Engenharia de Software do curso de Ciência da Computação da Universidade Federal de Lavras.
 # Descrição do Projeto
 O sistema faz o controle da Imobiliária JLS. O gerente da imobiliária pode cadastrar, excluir e atualizar o banco de dados dos imóveis, dos proprietários e dos inquilinos. O inquilino pode consultar o histórico de aluguéis pagos. O usuário pode consultar imóveis vagos.

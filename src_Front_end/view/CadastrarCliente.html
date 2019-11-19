@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="#">
+        <title>Cadastro de Cliente</title>
+    </head>
+    <body>
+      <form action="../controller/CadastrarCliente.php" method="post" style="border:1px solid #ccc">
+        <div class="container">
+          <h1>Cadastro de Cliente</h1>
+          <p>Preencha esse formulário para criar uma conta de cliente.</p>
+
+          <hr>
+
+          <label for="nome"><b>Nome</b></label>
+          <input type="text" placeholder="Entre com o nome" name="nome" required><br>
+
+          <label for="cpf"><b>CPF</b></label>
+          <input type="text" placeholder="Entre com o CPF" name="cpf" required><br>
+
+          <label for="nascimento"><b>Nascimento</b></label>
+          <input type="date" name="nascimento" required><br>
+
+          <label for="renda"><b>Renda</b></label>
+          <input type="text" placeholder="Entre com a renda" name="renda" required><br>
+
+          <hr>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Entre com o email" name="email" required><br>
+
+          <label for="senha"><b>Senha</b></label>
+          <input type="password" placeholder="Entre com a senha" name="senha" required><br>
+
+          <label for="confirmacaoSenha"><b>Confirmação de senha</b></label>
+          <input type="password" placeholder="Confirmação de senha" name="confirmacaoSenha" required><br>
+
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar-me
+          </label>
+
+          <hr>
+
+          <p>Criando uma conta você concorda com nossa <a href="#" style="color:dodgerblue">política de privacidade</a>.</p>
+
+          <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancelar</button>
+            <button type="submit" class="signupbtn">Registrar</button>
+          </div>
+        </div>
+      </form>
+    </body>
+</html>
