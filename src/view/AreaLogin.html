@@ -2,15 +2,32 @@
 <html lang="pt" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="#">
+        <link rel="icon" href="../images/logo.png"/>
         <title>Área de Login</title>
     </head>
     <body>
-        <h1 class="cabecalho">Gerenciador JLS</h1>
-        <h2>Área de login</h2>
-        <li><a href="LoginCliente.html">Cliente</a></li>
-        <li><a href="LoginInquilino.html">Inquilino</a></li>
-        <li><a href="LoginProprietario.html">Proprietário</a></li>
-        <li><a href="LoginAdministrador.html">Administrador</a></li>
+        <h1>Área de Login</h1>
+        <form action="action_page.php" method="post">
+            <div class="imgcontainer">
+                <img src="../images/avatar.png" alt="Avatar" class="avatar" height="42" width="42">
+            </div>
+
+            <div class="container">
+                <label for="cpf"><b>CPF</b></label><br>
+                <input type="text" placeholder="Entre com o CPF" name="uname" required><br>
+
+                <label for="senha"><b>Senha</b></label><br>
+                <input type="password" placeholder="Enter Password" name="psw" required><br>
+                <span class="psw">Esqueceu a <a href="#">senha?</a></span><br>
+            </div>
+
+            <div class="container">
+                <button type="submit">Entrar</button>
+                <button type="button" class="cancelbtn">Cancelar</button><br>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Lembrar-me
+                </label>
+            </div>
+        </form>
     </body>
 </html>
