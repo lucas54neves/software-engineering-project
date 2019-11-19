@@ -13,7 +13,7 @@
     $conexao = new Connection();
     $conexao = $conexao->getConnection();
 
-    $inquilino = new Inquilino($nome, $cpf, $nascimento, $renda, $imovelAlugado, $aluguel);
+    $inquilino = new Inquilino($cpf, $nome, $nascimento, $renda, $imovelAlugado, $aluguel);
 
     $inquilinoDAO = new InquilinoDAO();
     $inquilinoDAO->salvar($inquilino, $conexao);

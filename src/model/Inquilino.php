@@ -1,27 +1,27 @@
 <?php
     class Inquilino {
-        private $nome;
         private $cpf;
+        private $nome;
         private $nascimento;
         private $renda;
         private $imovelAlugado;
         private $aluguel;
 
-        function __construct($nome, $cpf, $nascimento, $renda, $imovelAlugado, $aluguel) {
-            $this->nome = $nome;
+        function __construct($cpf, $nome, $nascimento, $renda, $imovelAlugado, $aluguel) {
             $this->cpf = $cpf;
+            $this->nome = $nome;
             $this->nascimento = $nascimento;
             $this->renda = $renda;
             $this->imovelAlugado = $imovelAlugado;
             $this->aluguel = $aluguel;
         }
 
-        function getNome() {
-            return $this->nome;
-        }
-
         function getCpf() {
             return $this->cpf;
+        }
+
+        function getNome() {
+            return $this->nome;
         }
 
         function getNascimento() {
