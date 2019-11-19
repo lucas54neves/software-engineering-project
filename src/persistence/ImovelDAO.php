@@ -20,10 +20,16 @@
 
         function consultarCPF($cpf, $conexao) {
             $sql =
-                "SELECT i.idImovel, i.aluguel, i.logradouro, i.numero, i.bairro
+                "SELECT i.idImovel, i.cpfProprietario, i.aluguel, i.logradouro, i.numero, i.bairro
                     FROM imovel AS i
                         INNER JOIN inquilino AS inq
                         ON inq.imovelAlugado = i.idImovel AND inq.cpf = ".$cpf;
+            $resultado = $conexao->query($sql);
+            return $resultado;
+        }
+
+        function consultarBairro($bairro, $conexao) {
+            $sql = "SELECT * FROM `imovel` WHERE bairro = '".$bairro."'";
             $resultado = $conexao->query($sql);
             return $resultado;
         }
