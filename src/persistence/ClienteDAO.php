@@ -15,6 +15,12 @@
                 echo "Erro ao cadastrar o cliente: <br>".$conexao->error;
             }
         }
+
+        function consultarCPF($cpf, $conexao) {
+            $sql = "SELECT * FROM `cliente` WHERE cpf = ".$cpf;
+            $resultado = $conexao->query($sql);
+            return $resultado;
+        }
     }
 
  ?>
