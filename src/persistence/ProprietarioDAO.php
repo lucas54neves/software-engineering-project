@@ -20,5 +20,17 @@
             $resultado = $conexao->query($sql);
             return $resultado;
         }
+
+        function consultarSemImovel($conexao) {
+            $sql = "SELECT * FROM proprietario WHERE cpf NOT IN (SELECT cpfProprietario FROM imovel)";
+            $resultado = $conexao->query($sql);
+            return $resultado;
+        }
+
+        function removerProprietariosSemImoveis($conexao) {
+            $sql = "DELETE FROM proprietario WHERE cpf NOT IN (SELECT cpfProprietario FROM imovel)";
+            $conexao->query($sql);
+            return $this->consultarSemImovel($conexao);
+        }
     }
  ?>

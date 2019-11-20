@@ -6,11 +6,19 @@
         <title>Consulta de Proprietário</title>
     </head>
     <body>
-        <h2>Consulta de Proprietário por CPF</h2>
-        <form action="..\controller\ConsultarProprietario.php" method="post">
-            CPF: <input type="text" name="cpf" placeholder="Entre com o seu CPF"><br><br>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </form>
+        <fieldset>
+            <h2>Consulta de Proprietário por CPF</h2>
+            <form action="..\controller\ConsultarProprietario.php" method="post">
+                CPF: <input type="text" name="cpf" placeholder="Entre com o seu CPF"><br><br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </form>
+        </fieldset>
+        <fieldset>
+            <form action="..\controller\ConsultarProprietariosSemImoveis.php" method="post">
+                <input type="submit" value="Proprietários sem imóveis">
+            </form>
+        </fieldset>
+
     </body>
 </html>
