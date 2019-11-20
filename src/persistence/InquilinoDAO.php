@@ -23,6 +23,12 @@
             $resultado = $conexao->query($sql);
             return $resultado;
         }
+
+        function atualizarAluguel($cpf, $novoAluguel, $conexao) {
+            $sql = "UPDATE inquilino SET aluguel = " . $novoAluguel . " WHERE cpf = " . $cpf;
+            $conexao->query($sql);
+            return $this->consultarCPF($cpf, $conexao);
+        }
     }
 
  ?>
