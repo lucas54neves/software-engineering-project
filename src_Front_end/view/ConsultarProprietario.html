@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="../images/logo.png"/>
+        <title>Consulta de Proprietário</title>
+    </head>
+    <body>
+        <fieldset>
+            <h2>Consulta de Proprietário por CPF</h2>
+            <form action="..\controller\ConsultarProprietario.php" method="post">
+                CPF: <input type="text" name="cpf" placeholder="Entre com o seu CPF"><br><br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </form>
+        </fieldset>
+        <fieldset>
+            <form action="..\controller\ConsultarProprietariosSemImoveis.php" method="post">
+                <input type="submit" value="Proprietários sem imóveis">
+            </form>
+        </fieldset>
+
+    </body>
+</html>

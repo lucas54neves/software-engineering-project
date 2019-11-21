@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="../images/logo.png"/>
+        <title>Consulta de Imóvel</title>
+    </head>
+    <body>
+        <h2>Consulta de Imóvel</h2>
+        <fieldset>
+            <form action="..\controller\ConsultarImovelPorCPF.php" method="post">
+                CPF do Inquilino: <input type="text" name="cpf" placeholder="Entre com o CPF"><br><br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </form>
+        </fieldset>
+        <fieldset>
+            <form action="..\controller\ConsultarImovelPorBairro.php" method="post">
+                Bairro: <input type="text" name="bairro" placeholder="Entre com o bairro"><br><br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </form>
+        </fieldset>
+        <fieldset>
+            <form action="..\controller\ConsultarImovelNaoAlugado.php" method="post">
+                <input type="submit" value="Imóveis não alugados">
+            </form>
+        </fieldset>
+    </body>
+</html>
