@@ -10,7 +10,7 @@
                 $cliente->getRenda().")";
 
             if ($conexao->query($sql) == TRUE) {
-                echo "Cliente salvo";
+                echo "<script>alert('Cliente salvo')</script>";
             } else {
                 echo "Erro ao cadastrar o cliente: <br>".$conexao->error;
             }
