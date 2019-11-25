@@ -1,0 +1,3 @@
+Regras que devem ser seguidas no commit das alterações realizadas no projeto.
+- Nomes dos commits devem ser intuitivos em relação à alteração;
+- Nomes dos commits não devem exceder 100 caracteres.

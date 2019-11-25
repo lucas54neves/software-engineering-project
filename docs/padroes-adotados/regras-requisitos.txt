@@ -1,7 +1,7 @@
 Regras que devem ser seguidas no processo de especificação dos requisitos:
-- Evitar frases grandes;
+- Evitar frases maiores que 100 caracteres;
 - Definir apenas um requisito por vez;
-- Evitar frases como necessariamente, entretanto, mas, etc.
+- Evitar frases como necessariamente, etc, entretanto, mas, e, todavia, porém.
 
 A nomenclatura dos requisitos seguirá a seguinte regra::
 - RF[XXX]: Requisito Funcional número XXX;
