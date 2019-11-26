@@ -1,35 +1,3 @@
-<!-- <html lang="pt" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <link rel="icon" href="../images/logo.png"/>
-        <title>Área de Login</title>
-    </head>
-    <body>
-        <h1>Área de Login</h1>
-        <form action="action_page.php" method="post">
-            <div class="imgcontainer">
-                <img src="../images/avatar.png" alt="Avatar" class="avatar" height="42" width="42">
-            </div>
-
-            <div class="container">
-                <label for="cpf"><b>CPF</b></label><br>
-                <input type="text" placeholder="Entre com o CPF" name="uname" required><br>
-
-                <label for="senha"><b>Senha</b></label><br>
-                <input type="password" placeholder="Enter Password" name="psw" required><br>
-                <span class="psw">Esqueceu a <a href="#">senha?</a></span><br>
-            </div>
-
-            <div class="container">
-                <button type="submit">Entrar</button>
-                <button type="button" class="cancelbtn">Cancelar</button><br>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Lembrar-me
-                </label>
-            </div>
-        </form>
-    </body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,7 +53,6 @@
                             <div class="classynav">
                                 <ul id="nav">
                                     <li class="active"><a href="../index.html">Home</a></li>
-                                    <li><a href="AreaLogin.html">Login</a></li>
                                     <li><a href="AreaCadastro.html">Cadastrar</a></li>
 
                                 </ul>
@@ -122,34 +89,26 @@
                 <div class="col-12">
                     <!-- Section Heading -->
                     <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
-                        <h6>Login</h6>
-                        <h2>Faça seu Login Aqui!</h2>
+                        <h2>Escolha seu login</h2>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-12">
+                <div class="col-12" style="text-align:center;">
                     <!-- Form -->
-                    <div class="roberto-contact-form">
-                        <form action="action_page.php" method="post">
-                            <div class="row">
-                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" name="cpf" class="form-control mb-30" placeholder="Entre com o CPF" required>
-                                </div>
-                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="password" name="senha" class="form-control mb-30" placeholder="Entre com a Senha" required>
-                                </div>
-                                <div class="col-12 text-center wow fadeInUp" data-wow-delay="100ms">
-									<span class="psw"><a href="#">Esqueceu a senha?</a></span><br>
-                                    <button type="submit" class="btn roberto-btn mt-15">Entrar</button>
-                                    <button type="button" class="btn roberto-btn mt-15">Cancelar</button><br>
-                                    <label>
-										<input type="checkbox" checked="checked" name="remember"> Lembrar-me
-									</label>
-                                </div>
-                            </div>
-                        </form>
+                    <div class="roberto-contact-form" >
+                        <form action="AreaFuncionario.html" method="post">
+							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Funcionário</button>
+						</form>
+                        <br>
+                        <form action="AreaCliente.html" method="post">
+							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cliente</button>
+						</form>
+                        <br>
+                        <form action="AreaProprietario.html" method="post">
+							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Proprietário</button>
+						</form>
                     </div>
                 </div>
             </div>
