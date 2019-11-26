@@ -118,15 +118,28 @@
                                     <input type="text" class="form-control mb-30" placeholder="Entre com o email" name="email" required><br>
                                 </div>
 								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="password" class="form-control mb-30" placeholder="Entre com a senha" name="senha" required><br>
+                                    <input type="password" id="password" class="form-control mb-30" placeholder="Entre com a senha" name="senha" required><br>
                                 </div>
 								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="password" class="form-control mb-30" placeholder="Confirmação de senha" name="confirmacaoSenha" required><br>
+                                    <input type="password" id="confirm_password" class="form-control mb-30" placeholder="Confirmação de senha" name="confirmacaoSenha" required><br>
                                 </div>
-                                <button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cadastrar</button>
+                                <button type="submit" style="margin: 0 15px;" id="inputSubmit" class="btn roberto-btn mt-15">Cadastrar</button>
                                 <button type="button" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cancelar</button><br>
                             </div>
                         </form>
+						<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+						<script>
+						  $(function(){
+							$("#inputSubmit").click(function(){
+							  var senha = $("#password").val();
+							  var senha2 = $("#confirm_password").val();
+							  if(senha != senha2){
+								event.preventDefault();
+								alert("As senhas são diferentes!");
+							  }
+							});
+						  });
+						</script>
                     </div>
                 </div>
             </div>
