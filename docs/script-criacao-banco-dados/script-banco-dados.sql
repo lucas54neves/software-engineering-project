@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS `imobiliaria`.`Proprietario` (
   `nome` VARCHAR(100) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `nascimento` DATE NOT NULL,
+  `senha` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -57,6 +58,7 @@ CREATE TABLE IF NOT EXISTS `imobiliaria`.`Cliente` (
   `email` VARCHAR(45) NOT NULL,
   `renda` DOUBLE NOT NULL,
   `nascimento` DATE NOT NULL,
+  `senha` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -69,6 +71,7 @@ CREATE TABLE IF NOT EXISTS `imobiliaria`.`Funcionario` (
   `cpf` VARCHAR(11) NOT NULL,
   `nome` VARCHAR(100) NOT NULL,
   `nascimento` DATE NOT NULL,
+  `senha` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
