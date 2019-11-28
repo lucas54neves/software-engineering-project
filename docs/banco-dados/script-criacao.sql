@@ -68,6 +68,7 @@ CREATE TABLE IF NOT EXISTS `imobiliaria`.`Funcionario` (
   `cpf` VARCHAR(11) NOT NULL,
   `nome` VARCHAR(100) NOT NULL,
   `nascimento` DATE NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
   `senha` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`cpf`))
 ENGINE = InnoDB;
