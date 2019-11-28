@@ -3,34 +3,18 @@
         function __construct() {}
 
         function salvar($proprietario, $conexao) {
-            $sql = "INSERT INTO `proprietario`(`nome`, `cpf`, `nascimento`) VALUES ('".
-                $proprietario->getNome()."','".
+            $sql = "INSERT INTO `Proprietario`(`cpf`, `nome`, `email`, `nascimento`, `senha`) VALUES ('".
                 $proprietario->getCpf()."','".
-                $proprietario->getNascimento()."')";
+                $proprietario->getNome()."','".
+                $proprietario->getEmail()."','".
+                $proprietario->getNascimento()."','".
+                $proprietario->getSenha()."')";
 
             if ($conexao->query($sql) == TRUE) {
-                echo "Proprietario salvo";
+                echo "<script>alert('Proprietario salvo')</script>";
             } else {
                 echo "Erro ao cadastrar o proprietario: <br>".$conexao->error;
             }
-        }
-
-        function consultarCPF($cpf, $conexao) {
-            $sql = "SELECT * FROM `proprietario` WHERE cpf = ".$cpf;
-            $resultado = $conexao->query($sql);
-            return $resultado;
-        }
-
-        function consultarSemImovel($conexao) {
-            $sql = "SELECT * FROM proprietario WHERE cpf NOT IN (SELECT cpfProprietario FROM imovel)";
-            $resultado = $conexao->query($sql);
-            return $resultado;
-        }
-
-        function removerProprietariosSemImoveis($conexao) {
-            $sql = "DELETE FROM proprietario WHERE cpf NOT IN (SELECT cpfProprietario FROM imovel)";
-            $conexao->query($sql);
-            return $this->consultarSemImovel($conexao);
         }
     }
  ?>

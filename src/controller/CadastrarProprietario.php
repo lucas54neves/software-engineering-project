@@ -3,14 +3,16 @@
     include_once '../model/Proprietario.php';
     include_once '../persistence/ProprietarioDAO.php';
 
-    $nome = $_POST['nome'];
     $cpf = $_POST['cpf'];
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
     $nascimento = $_POST['nascimento'];
+    $senha = $_POST['senha'];
+
+    $proprietario = new Proprietario($cpf, $nome, $email, $nascimento, $senha);
 
     $conexao = new Connection();
     $conexao = $conexao->getConnection();
-
-    $proprietario = new Proprietario($nome, $cpf, $nascimento);
 
     $proprietarioDAO = new ProprietarioDAO();
     $proprietarioDAO->salvar($proprietario, $conexao);

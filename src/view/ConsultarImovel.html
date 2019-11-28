@@ -52,16 +52,9 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="./index.html">Home</a></li>
-                                    <li><a href="view/AreaLogin.html">Login</a></li>
-                                    <li><a href="view/AreaCadastro.html">Cadastrar</a></li>
-                                    <li><a href="view/AreaConsulta.html">Consultar</a></li>
-                                    <li><a href="#">Outros</a>
-										<ul class="dropdown">
-											<li><a href="view/AreaRemocao.html">Área de Remoção</a></li>
-                                            <li><a href="view/AreaAtualizacao.html">Área de Atualização</a></li>
-                                        </ul>
-                                    </li>
+                                    <li class="active"><a href="../index.html">Home</a></li>
+                                    <li><a href="AreaLogin.html">Login</a></li>
+                                    <li><a href="AreaCadastro.html">Cadastro</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -107,28 +100,13 @@
                 <div class="col-12">
                     <!-- Form -->
                     <div class="roberto-contact-form">
-                        <form action="..\controller\ConsultarImovelPorCPF.php" method="post">
-                            <div class="row">
-                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF do Inquilino:" name="cpf" ><br>
-                                </div>
-                                <button type="submit" style="margin: 0 15px;" value="Enviar" class="btn roberto-btn mt-15">Enviar</button>
-                                <button type="reset" style="margin: 0 15px;"  value="Limpar" class="btn roberto-btn mt-15">Limpar</button><br>
-                            </div>
-                        </form>
-                        <form action="..\controller\ConsultarImovelPorBairro.php" method="post">
+                        <form action="..\controller\ConsultarImovel.php" method="post">
                             <div class="row">
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="text" class="form-control mb-30" placeholder="Entre com o bairro" name="bairro" ><br>
                                 </div>
                                 <button type="submit" style="margin: 0 15px;" value="Enviar" class="btn roberto-btn mt-15">Enviar</button>
                                 <button type="reset" style="margin: 0 15px;"  value="Limpar" class="btn roberto-btn mt-15">Limpar</button><br>
-                            </div>
-                        </form>
-                        <form action="..\controller\ConsultarImovelNaoAlugado.php" method="post">
-							<div class="row">
-								<button type="submit" style="margin: 0 15px;" value="Imóveis não alugados" class="btn roberto-btn mt-15">Imoveis não alugados</button>
-							</div>
 						</form>
                     </div>
                 </div>
