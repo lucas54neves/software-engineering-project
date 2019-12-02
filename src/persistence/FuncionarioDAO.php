@@ -16,5 +16,11 @@
                 echo "Erro ao cadastrar o funcionario: <br>".$conexao->error;
             }
         }
+
+        function consultar($cpf, $conexao) {
+            $sql = "SELECT * FROM `Funcionario` WHERE cpf = '" . $cpf . "'";
+            $resultado = $conexao->query($sql);
+            return $resultado;
+        }
     }
  ?>

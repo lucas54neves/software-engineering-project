@@ -24,6 +24,12 @@
             return $resultado;
         }
 
+        function consultarID($id, $conexao) {
+            $sql = "SELECT * FROM `Imovel` WHERE id = '" . $id . "'";
+            $resultado = $conexao->query($sql);
+            return $resultado;
+        }
+
         function atualizar($conexao, $id, $logradouro, $numero, $bairro, $aluguel, $cpfProprietario) {
             $sql = "UPDATE `Imovel`
                 SET
