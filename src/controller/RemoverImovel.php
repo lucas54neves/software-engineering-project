@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Atualização de Imóvel</title>
+    <title>Remover Imóvel</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../images/logo.png"/>
@@ -72,7 +72,7 @@
                 <div class="col-12">
                     <div class="breadcrumb-content text-center">
                         <div class="breadcrumb-post-content">
-                            <h2 class="post-title">Atualização dos Imóveis</h2>
+                            <h2 class="post-title">Remover Imóveis</h2>
                         </div>
                     </div>
                 </div>
