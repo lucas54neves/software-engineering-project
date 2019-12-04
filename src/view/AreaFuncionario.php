@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<?php 
+// Inicia sessões 
+session_start(); 
+ 
+ 
+// Verifica se existe os dados da sessão de login 
+if(!isset($_SESSION['cpffuncionario'])) 
+{ 
+// Usuário não logado! Redireciona para a página de login 
+	header('location: ../view/AreaLogin.php');
+exit; 
+} 
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -53,8 +67,12 @@
                             <div class="classynav">
                                 <ul id="nav">
                                     <li class="active"><a href="../index.php">Home</a></li>
-                                    <li><a href="AreaCadastro.php">Cadastro</a></li>
-                                    <li><a href="AreaLogin.php">Login</a></li>
+                                    <?php
+									
+									if(isset($_SESSION['cpffuncionario'])){
+										echo "<li><a href=\" ../controller/sair.php\">logut</a></li>";
+									}
+									?>
 
                                 </ul>
                             </div>

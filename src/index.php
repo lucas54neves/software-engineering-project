@@ -59,6 +59,16 @@
 										echo "<li><a href=\" view/AreaProprietario.php\">Painel</a></li>";
 										echo "<li><a href=\" controller/sairindex.php\">logut</a></li>";
 									}
+									else if(isset($_SESSION['cpfcliente'])){
+										
+										echo "<li><a href=\" view/AreaCliente.php\">Painel</a></li>";
+										echo "<li><a href=\" controller/sairindex.php\">logut</a></li>";
+									}
+									else if(isset($_SESSION['cpffuncionario'])){
+										
+										echo "<li><a href=\" view/AreaFuncionario.php\">Painel</a></li>";
+										echo "<li><a href=\" controller/sairindex.php\">logut</a></li>";
+									}
 									else{
 										echo "<li><a href=\"view/AreaLogin.php\">Login</a></li>";
 										echo "<li><a href=\"view/AreaCadastro.php\">Cadastrar</a></li>";

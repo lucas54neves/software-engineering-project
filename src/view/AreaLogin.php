@@ -104,11 +104,11 @@
                 <div class="col-12" style="text-align:center;">
                     <!-- Form -->
                     <div class="roberto-contact-form" >
-                        <form action="AreaLogin.php" method="post">
+                        <form action="LoginFuncionario.php" method="post">
 							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Funcionário</button>
 						</form>
                         <br>
-                        <form action="AreaCliente.php" method="post">
+                        <form action="LoginCliente.php" method="post">
 							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cliente</button>
 						</form>
                         <br>
