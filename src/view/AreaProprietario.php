@@ -70,7 +70,7 @@ exit;
 									<?php
 									
 									if(isset($_SESSION['cpfproprietario'])){
-										echo "<li><a href=\" ../controller/sair.php\">logut</a></li>";
+										echo "<li><a href=\" ../controller/sair.php\">logout</a></li>";
 									}
 									?>
                                     
