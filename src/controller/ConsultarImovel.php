@@ -66,7 +66,7 @@
     <!-- Header Area End -->
 
     <!-- Breadcrumb Area Start -->
-    <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(../img/bg-img/17.jpg);">
+    <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(../img/bg-img/17.jpg);'>
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -79,38 +79,6 @@
             </div>
         </div>
     </div>
-    <!-- Breadcrumb Area End -->
-
-
-<!-- Contact Form Area Start -->
-    <div class="roberto-contact-form-area section-padding-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Section Heading -->
-                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
-                        <h6>Área de Consulta de Imóvel</h6>
-                        <h2>Consulta de Imóvel</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <!-- Form -->
-                    <div class="roberto-contact-form">
-                        <form action="ConsultarImovel.php" method="post">
-                            <div class="row">
-                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o bairro" name="bairro" ><br>
-                                </div>
-                                <button type="submit" style="margin: 0 15px;" value="Enviar" class="btn roberto-btn mt-15">Enviar</button>
-                                <button type="reset" style="margin: 0 15px;"  value="Limpar" class="btn roberto-btn mt-15">Limpar</button><br>
-						</form>
-
-    <!-- Contact Form Area End -->
-
-
 
 <?php
     include_once '../persistence/Connection.php';
@@ -125,48 +93,65 @@
     $imovelDAO = new ImovelDAO();
     $resultado = $imovelDAO->consultar($bairro, $conexao);
 	
-    if ($resultado->num_rows > 0) {
-		echo "<table border=\"2\" class=\"col-12\">
-				<div class=\"col-12\">
-                    <!-- Section Heading -->
-                    <div class=\"section-heading text-center wow fadeInUp\" data-wow-delay=\"100ms\">";
-        echo "
-            
-                <tr>
-                    <h6><th> ID</th>
-                    <th>Logradouro</th>
-                    <th>Número</th>
-                    <th>Bairro</th>
-                    <th>Aluguel</th>
-                    <th>CPF do proprietário</th></h6>
-                </tr>";
-        while ($linha = $resultado->fetch_assoc()) {
-            echo "<tr>";
-            echo
-                "<td>".$linha['id']."</td>".
-                "<td>".$linha['logradouro']."</td>".
-                "<td>".$linha['numero']."</td>".
-                "<td>".$linha['bairro']."</td>".
-                "<td>".$linha['aluguel']."</td>".
-                "<td>".$linha['cpfProprietario']."</td>";
-            echo "</tr>";
-        }
+	if ($resultado->num_rows > 0) {
+		while ($linha = $resultado->fetch_assoc()) {
+			echo "
+					<div class='roberto-contact-form-area section-padding-100'>
+						<div class='container'>
+							<div class='row'>
+								<div class='col-12'>
+									<!-- Section Heading -->
+									<div class='section-heading text-center wow fadeInUp' data-wow-delay='100ms'>
+									</div>
+									<div class='section-heading text-center wow fadeInUp' data-wow-delay='100ms'>
+										
+										<h2>Imóvel</h2>
+									</div>
+								</div>
+							</div>
 
-        echo "</div></div></table>";
-    } else {
+							<div class='row'>
+								<div class='col-12'>
+									
+									<div class='roberto-contact-form'>
+										
+											<div class='row'>
+												<div class='col-12 col-lg-6 wow fadeInUp' data-wow-delay='100ms'>
+													ID: <input type='text' class='form-control mb-30' value = '".$linha['id']."' readonly='true'><br>
+												</div>
+												<div class='col-12 col-lg-6 wow fadeInUp' data-wow-delay='100ms'>
+													Logradouro<input type='text' class='form-control mb-30' value = '".$linha['logradouro']."' name='logradouro' readonly='true'><br>
+												</div>
+												<div class='col-12 col-lg-6 wow fadeInUp' data-wow-delay='100ms'>
+													Número:<input type='text' class='form-control mb-30' value = '".$linha['numero']."' name='numero' readonly='true'><br>
+												</div>
+												<div class='col-12 col-lg-6 wow fadeInUp' data-wow-delay='100ms'>
+													Bairro:<input type='text' class='form-control mb-30' value = '".$linha['bairro']."' name='bairro' readonly='true'><br>
+												</div>
+												<div class='col-12 col-lg-6 wow fadeInUp' data-wow-delay='100ms'>
+													Aluguel:<input type='text' class='form-control mb-30' value = '".$linha['aluguel']."' name='aluguel' readonly='true'><br>
+												</div>
+											  
+												<div class='col-12 col-lg-6 wow fadeInUp' data-wow-delay='100ms'>
+													CPF do Proprietário:<input type='text' class='form-control mb-30' value = '".$linha['cpfProprietario']."' name='aluguel' readonly='true'><br>
+												</div>
+
+												
+												
+											</div>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>";
+		}
+		echo "<a href='../view/ConsultarImovel.php' style='margin: 0 125px;' class='btn roberto-btn mt-15'>Voltar</a><br>";
+	} else {
         echo "<script>alert('Não tem imóvel desse bairro cadastrado')</script>";
-    }
+		}
 ?>
-						
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-	<br>
-	
-	    <!-- Partner Area End -->
-<!-- Footer Area Start -->
+	<br><br>
     <footer class="footer-area section-padding-80-0">
         <!-- Main Footer Area -->
         <div class="main-footer-area">
@@ -264,4 +249,3 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script>
 </body>
 
 </html>
-
