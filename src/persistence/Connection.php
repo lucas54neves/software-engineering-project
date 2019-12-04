@@ -7,7 +7,7 @@
         private $conn;
 
         function __construct() {
-            $this->servername = "localhost";
+            $this->servername = "127.0.0.1";
             $this->username = "root";
             $this->password = "";
             $this->bd = "imobiliaria";
