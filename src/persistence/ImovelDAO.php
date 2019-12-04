@@ -51,13 +51,20 @@
         }
 
         function remover($conexao, $bairro) {
-            $sql = "DELETE FROM `Imovel` WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "' AND bairro = '" . $bairro . "'";
+            $resultadoTemImovel = this->consultar($bairro, $conexao);
 
-            if ($conexao->query($sql) == TRUE) {
-                echo "<script>alert('Imovel(eis) removido(s)')</script>";
+            if ($resultadoTemImovel->num_rows > 0) {
+                $sql = "DELETE FROM `Imovel` WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "' AND bairro = '" . $bairro . "'";
+
+                if ($conexao->query($sql) == TRUE) {
+                    echo "<script>alert('Imovel(eis) removido(s)')</script>";
+                } else {
+                    echo "Erro ao remover imovel: <br>".$conexao->error;
+                }
             } else {
-                echo "Erro ao remover imovel: <br>".$conexao->error;
+                echo "<script>alert('Você não tem imóveis cadastrado nesse bairro')</script>";
             }
+
         }
     }
  ?>
