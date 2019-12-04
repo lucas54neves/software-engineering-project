@@ -51,9 +51,17 @@
             $sql = "DELETE FROM `Imovel` WHERE bairro = '" . $bairro . "'";
 
             if ($conexao->query($sql) == TRUE) {
-                echo "<script>alert('Imovel(eis) removido(s)')</script>";
+                
+				echo ("<SCRIPT LANGUAGE='JavaScript'>
+				window.alert('Imovel(eis) removido(s)!')
+				window.location.href='../view/RemoverImovel.php';
+				</SCRIPT>");
             } else {
-                echo "Erro ao remover imovel: <br>".$conexao->error;
+       
+				echo ("<SCRIPT LANGUAGE='JavaScript'>
+				window.alert('Erro ao remover imovel!')
+				window.location.href='../view/RemoverImovel.php';
+				</SCRIPT>");
             }
         }
     }

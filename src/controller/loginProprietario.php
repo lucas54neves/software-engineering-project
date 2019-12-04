@@ -20,8 +20,7 @@
 	if($cpf == $linha['cpf'] and $senha == $linha['senha']){
 		$_SESSION['cpfproprietario'] = $linha['cpf'];
 		$_SESSION['nomeproprietario'] = $linha['nome'];
-		echo $linha['senha'];
-		echo $senha;
+		
 		header('Location: ../view/AreaProprietario.php');
 		exit;
 		
