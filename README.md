@@ -10,19 +10,30 @@ No sistema, as seguintes informações dos imóveis são armazenadas: tipo do im
 ## Tecnologias Utilizadas
 * [PHP](https://www.php.net/) - linguagem para o back-end
 * [HTML](https://www.w3schools.com/html/) e [CSS](https://www.w3schools.com/css/) - linguagens para o front-end
-* [Dia](http://dia-installer.de/) - ferramenta para criar diagramas
+* [Astah](http://astah.net/) - ferramenta para criar diagramas
 * [MariaBD](https://mariadb.org/) - banco de dados
 * [XAMPP](https://www.apachefriends.org/pt_br/index.html) - servidor
 ## Estrutura de Diretórios
 ```
 gerenciadorJLS
   -> docs
-    -> documento-requisitos.pdf
-    -> diagrama-classe.png
-    -> diagrama-sequencia.png
+    -> banco-dados
+      -> banco-dados.mwb
+      -> script-criacao.sql
+    -> diagrama-sequencial
+    -> diagrama-classe
+      -> diagrama-classe.asta
+      -> diagrama-classe.png
+    -> documento-requisitos
+      -> documento-requisitos.pdf
+    -> padroes-adotados
+      -> boas-praticas-programacao.txt
+      -> regras-commits.txt
+      -> regras-requisitos.txt
   -> src
     -> view
     -> controller
     -> model
     -> persistence
+  -> test
 ```

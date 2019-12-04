@@ -22,5 +22,6 @@
             $resultado = $conexao->query($sql);
             return $resultado;
         }
+		
     }
  ?>

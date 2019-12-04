@@ -36,7 +36,7 @@
                     <nav class="classy-navbar justify-content-between" id="robertoNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="./images/logo.png" alt="" width="80" height="80"></a>
+                        <a class="nav-brand" href="index.php"><img src="./images/logo.png" alt="" width="80" height="80"></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -48,6 +48,26 @@
                             <!-- Menu Close Button -->
                             <div class="classycloseIcon">
                                 <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+							<div class="classynav">
+                                <ul id="nav">
+                                    <li class="active"><a href="index.php">Home</a></li>
+									<?php
+									session_start();
+									if(isset($_SESSION['cpfproprietario'])){
+										
+										echo "<li><a href=\" view/AreaProprietario.php\">Painel</a></li>";
+										echo "<li><a href=\" controller/sairindex.php\">logut</a></li>";
+									}
+									else{
+										echo "<li><a href=\"view/AreaLogin.php\">Login</a></li>";
+										echo "<li><a href=\"view/AreaCadastro.php\">Cadastrar</a></li>";
+									}
+									?>
+									
+                                    
+                                    
+                                </ul>
                             </div>
                         </div>
                     </nav>
@@ -72,8 +92,8 @@
                                 <div class="welcome-text text-center">
                                     <h6 data-animation="fadeInLeft" data-delay="200ms">JLS</h6>
                                     <h2 data-animation="fadeInLeft" data-delay="500ms">Bem Vindo ao JLS</h2>
-                                    <a href="view/AreaLogin.html" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Login</a>
-                                    <a href="view/AreaCadastro.html" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Cadastrar</a>
+                                    <!--<a href="view/AreaLogin.php" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Login</a>
+                                    <a href="view/AreaCadastro.php" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Cadastrar</a>-->
                                 </div>
                             </div>
                         </div>
@@ -92,8 +112,8 @@
                                 <div class="welcome-text text-center">
                                     <h6 data-animation="fadeInLeft" data-delay="200ms">JLS</h6>
                                     <h2 data-animation="fadeInLeft" data-delay="500ms">Bem Vindo ao JLS</h2>
-                                    <a href="view/AreaLogin.html" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Login</a>
-                                    <a href="view/AreaCadastro.html" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Cadastrar</a>
+                                    <!-- <a href="view/AreaLogin.php" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Login</a>
+                                    <a href="view/AreaCadastro.php" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Cadastrar</a>-->
                                 </div>
                             </div>
                         </div>
@@ -112,8 +132,8 @@
                                 <div class="welcome-text text-center">
                                     <h6 data-animation="fadeInLeft" data-delay="200ms">JLS</h6>
                                     <h2 data-animation="fadeInLeft" data-delay="500ms">Bem Vindo ao JLS</h2>
-                                    <a href="view/AreaLogin.html" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Login</a>
-                                    <a href="view/AreaCadastro.html" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Cadastrar</a>
+                                    <!--<a href="view/AreaLogin.php" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Login</a>
+                                    <a href="view/AreaCadastro.php" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Cadastrar</a>-->
                                 </div>
                             </div>
                         </div>
@@ -257,7 +277,7 @@
                         <!-- Post Title -->
                         <a href="#" class="post-title">Venha Conhecer</a>
                         <p>Diaria</p>
-                        <a href="index.html" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        <a href="index.php" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
@@ -273,7 +293,7 @@
                         <!-- Post Title -->
                         <a href="#" class="post-title">Relaxar</a>
                         <p>Venha Conhecer</p>
-                        <a href="index.html" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        <a href="index.php" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
@@ -289,7 +309,7 @@
                         <!-- Post Title -->
                         <a href="#" class="post-title">Ferias</a>
                         <p>Venha Conhecer…</p>
-                        <a href="index.html" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        <a href="index.php" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
@@ -368,7 +388,7 @@
                             <span>Envie seu email</span>
 
                             <!-- Newsletter Form -->
-                            <form action="index.html" class="nl-form">
+                            <form action="index.php" class="nl-form">
                                 <input type="email" class="form-control" placeholder="Enter your email...">
                                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                             </form>

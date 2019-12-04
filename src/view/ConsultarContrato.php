@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Área de Cadastro</title>
+    <title>Consulta de Contrato</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../images/logo.png"/>
@@ -36,7 +36,7 @@
                     <nav class="classy-navbar justify-content-between" id="robertoNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="../images/logo.png" alt="" width="80" height="80"></a>
+                        <a class="nav-brand" href="../index.php"><img src="../images/logo.png" alt="" width="80" height="80"></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -52,10 +52,9 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="../index.html">Home</a></li>
-                                    <li><a href="AreaLogin.html">Login</a></li>
-                                    <li><a href="AreaCadastro.html">Cadastrar</a></li>
-
+                                    <li class="active"><a href="../index.php">Home</a></li>
+                                    <li><a href="AreaLogin.php">Login</a></li>
+                                    <li><a href="AreaCadastro.php">Cadastro</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -73,8 +72,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumb-content text-center mt-100">
-                        <h2 class="page-title">Área de Cadastro</h2>
-
+                        <h2 class="page-title">Consulta de Contrato</h2>
                     </div>
                 </div>
             </div>
@@ -90,7 +88,6 @@
                 <div class="col-12">
                     <!-- Section Heading -->
                     <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
-                        <h2>Cadastrar Funcionário</h2>
                     </div>
                 </div>
             </div>
@@ -99,27 +96,13 @@
                 <div class="col-12">
                     <!-- Form -->
                     <div class="roberto-contact-form">
-                        <form action="../controller/CadastrarFuncionario.php" method="post">
+                        <form action="../controller/ConsultarContrato.php" method="post">
                             <div class="row">
-                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o nome" name="nome" required><br>
-                                </div>
-                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF" name="cpf" required><br>
-                                </div>
 								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="date" class="form-control mb-30" name="nascimento" required><br>
+                                    <input type="text" class="form-control mb-30" placeholder="ID do contrato" name="idContrato" required><br>
                                 </div>
-								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o email" name="email" required><br>
-                                </div>
-								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="password" class="form-control mb-30" placeholder="Entre com a senha" name="senha" required><br>
-                                </div>
-								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="password" class="form-control mb-30" placeholder="Confirmação de senha" name="confirmacaoSenha" required><br>
-                                </div>
-                                <button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cadastrar</button>
+
+                                <button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Consultar</button>
                                 <button type="button" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cancelar</button><br>
                             </div>
                         </form>
@@ -200,7 +183,7 @@
                             <span>Envie seu email</span>
 
                             <!-- Newsletter Form -->
-                            <form action="index.html" class="nl-form">
+                            <form action="index.php" class="nl-form">
                                 <input type="email" class="form-control" placeholder="Enter your email...">
                                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                             </form>

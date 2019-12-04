@@ -16,4 +16,6 @@
 
     $proprietarioDAO = new ProprietarioDAO();
     $proprietarioDAO->salvar($proprietario, $conexao);
+	
+	header('Location: ../index.html');
 ?>
