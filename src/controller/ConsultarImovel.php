@@ -133,7 +133,7 @@
 												</div>
 											  
 												<div class='col-12 col-lg-6 wow fadeInUp' data-wow-delay='100ms'>
-													CPF do Proprietário:<input type='text' class='form-control mb-30' value = '".$linha['cpfProprietario']."' name='aluguel' readonly='true'><br>
+													CPF do Proprietário :<input type='text' class='form-control mb-30' value = '".$linha['cpfProprietario']."' name='aluguel' readonly='true'><br>
 												</div>
 
 												
