@@ -2,7 +2,7 @@
     include_once '../persistence/Connection.php';
     include_once '../model/Imovel.php';
     include_once '../persistence/ImovelDAO.php';
-	session_start();
+	
     $id = $_POST['idImovel'];
     $logradouro = $_POST['logradouro'];
     $numero = $_POST['numero'];
