@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Atualização de Contrato</title>
+    <title>Consulta de Imóvel</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../images/logo.png"/>
@@ -36,7 +36,7 @@
                     <nav class="classy-navbar justify-content-between" id="robertoNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="../images/logo.png" alt="" width="80" height="80"></a>
+                        <a class="nav-brand" href="../index.php"><img src="../images/logo.png" alt="" width="80" height="80"></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -52,9 +52,9 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="../index.html">Home</a></li>
-                                    <li><a href="AreaLogin.html">Login</a></li>
-                                    <li><a href="AreaCadastro.html">Cadastro</a></li>
+                                    <li class="active"><a href="../index.php">Home</a></li>
+                                    <li><a href="AreaLogin.php">Login</a></li>
+                                    <li><a href="AreaCadastro.php">Cadastro</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -67,12 +67,14 @@
     <!-- Header Area End -->
 
     <!-- Breadcrumb Area Start -->
-    <div class="breadcrumb-area contact-breadcrumb bg-img bg-overlay jarallax" style="background-image: url(../img/bg-img/18.jpg);">
-        <div class="container">
-            <div class="row">
+    <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(../img/bg-img/17.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
                 <div class="col-12">
-                    <div class="breadcrumb-content text-center mt-100">
-                        <h2 class="page-title">Atualização de Contrato</h2>
+                    <div class="breadcrumb-content text-center">
+                        <div class="breadcrumb-post-content">
+                            <h2 class="post-title">Consulta de Imóvel</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -81,13 +83,15 @@
     <!-- Breadcrumb Area End -->
 
 
-    <!-- Contact Form Area Start -->
+<!-- Contact Form Area Start -->
     <div class="roberto-contact-form-area section-padding-100">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <!-- Section Heading -->
                     <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
+                        <h6>Área de Consulta de Imóvel</h6>
+                        <h2>Consulta de Imóvel</h2>
                     </div>
                 </div>
             </div>
@@ -96,22 +100,14 @@
                 <div class="col-12">
                     <!-- Form -->
                     <div class="roberto-contact-form">
-                        <form action="../controller/AtualizarContrato.php" method="post">
+                        <form action="..\controller\ConsultarImovel.php" method="post">
                             <div class="row">
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o ID do Contrato" name="idContrato" required><br>
+                                    <input type="text" class="form-control mb-30" placeholder="Entre com o bairro" name="bairro" ><br>
                                 </div>
-                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o novo aluguel" name="novoAluguel" required><br>
-                                </div>
-                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF do novo cliente" name="cpfNovoCliente" required><br>
-                                </div>
-
-                                <button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Atualizar</button>
-                                <button type="button" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cancelar</button><br>
-                            </div>
-                        </form>
+                                <button type="submit" style="margin: 0 15px;" value="Enviar" class="btn roberto-btn mt-15">Enviar</button>
+                                <button type="reset" style="margin: 0 15px;"  value="Limpar" class="btn roberto-btn mt-15">Limpar</button><br>
+						</form>
                     </div>
                 </div>
             </div>
@@ -121,30 +117,8 @@
 
 
 
-    <!-- Partner Area Start -->
-    <div class="partner-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p1.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p2.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p3.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p4.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p5.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Partner Area End -->
-
-    <!-- Footer Area Start -->
+<!-- Footer Area Start -->
     <footer class="footer-area section-padding-80-0">
         <!-- Main Footer Area -->
         <div class="main-footer-area">
@@ -189,7 +163,7 @@
                             <span>Envie seu email</span>
 
                             <!-- Newsletter Form -->
-                            <form action="index.html" class="nl-form">
+                            <form action="index.php" class="nl-form">
                                 <input type="email" class="form-control" placeholder="Enter your email...">
                                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                             </form>

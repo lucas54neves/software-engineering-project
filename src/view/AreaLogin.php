@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Área do Proprietário</title>
+    <title>Área de Login</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../images/logo.png"/>
@@ -36,7 +36,7 @@
                     <nav class="classy-navbar justify-content-between" id="robertoNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="../images/logo.png" alt="" width="80" height="80"></a>
+                        <a class="nav-brand" href="../index.php"><img src="../images/logo.png" alt="" width="80" height="80"></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -52,9 +52,14 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="../index.html">Home</a></li>
-                                    <li><a href="AreaCadastro.html">Cadastro</a></li>
-                                    <li><a href="AreaLogin.html">Login</a></li>
+                                    <li class="active"><a href="../index.php">Home</a></li>
+                                    <li><a href="AreaCadastro.php">Cadastrar</a></li>
+									<?php
+									session_start();
+									if(isset($_SESSION['cpfproprietario'])){
+										echo "<li><a href=\"../controller/sair.php\">logut</a></li>";
+									}
+									?>
 
                                 </ul>
                             </div>
@@ -73,7 +78,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumb-content text-center mt-100">
-                        <h2 class="page-title">Área do Proprietário</h2>
+                        <h2 class="page-title">Área de Login</h2>
 
                     </div>
                 </div>
@@ -90,34 +95,26 @@
                 <div class="col-12">
                     <!-- Section Heading -->
                     <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
-                        <h2>Escolha a operação desejada</h2>
+                        <h2>Escolha seu login</h2>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-12" >
+                <div class="col-12" style="text-align:center;">
                     <!-- Form -->
-                    <div class="roberto-contact-form" style="text-align:center;">
-                        <div class="">
-                            <form action="CadastrarImovel.html" method="post">
-    							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cadastrar Imóvel</button>
-    						</form>
-                            <br>
-                            <form action="ConsultarImovel.html" method="post">
-    							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Consultar Imóvel</button>
-    						</form>
-                        </div>
+                    <div class="roberto-contact-form" >
+                        <form action="AreaLogin.php" method="post">
+							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Funcionário</button>
+						</form>
                         <br>
-                        <div class="">
-                            <form action="AtualizarImovel.html" method="post">
-    							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Atualizar Imóvel</button>
-    						</form>
-                            <br>
-                            <form action="RemoverImovel.html" method="post">
-    							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Remover Imóvel</button>
-    						</form>
-                        </div>
+                        <form action="AreaCliente.php" method="post">
+							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cliente</button>
+						</form>
+                        <br>
+                        <form action="LoginProprietario.php" method="post">
+							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Proprietário</button>
+						</form>
                     </div>
                 </div>
             </div>
@@ -195,7 +192,7 @@
                             <span>Envie seu email</span>
 
                             <!-- Newsletter Form -->
-                            <form action="index.html" class="nl-form">
+                            <form action="index.php" class="nl-form">
                                 <input type="email" class="form-control" placeholder="Enter your email...">
                                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                             </form>

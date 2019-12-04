@@ -16,4 +16,6 @@
 
     $funcionarioDAO = new FuncionarioDAO();
     $funcionarioDAO->salvar($funcionario, $conexao);
+	
+	header('Location: ../index.html');
 ?>

@@ -9,7 +9,7 @@
 
     $imovelDAO = new ImovelDAO();
     $resultado = $imovelDAO->consultar($bairro, $conexao);
-
+	
     if ($resultado->num_rows > 0) {
         echo "
             <table>
