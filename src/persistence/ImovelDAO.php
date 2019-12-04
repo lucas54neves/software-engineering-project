@@ -51,7 +51,7 @@
         }
 
         function remover($conexao, $bairro) {
-            $resultadoTemImovel = this->consultar($bairro, $conexao);
+            $resultadoTemImovel = $this->consultar($bairro, $conexao);
 
             if ($resultadoTemImovel->num_rows > 0) {
                 $sql = "DELETE FROM `Imovel` WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "' AND bairro = '" . $bairro . "'";
