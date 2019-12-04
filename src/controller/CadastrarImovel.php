@@ -17,4 +17,9 @@
 
     $imovelDAO = new ImovelDAO();
     $imovelDAO->salvar($imovel, $conexao);
+	
+	echo ("<SCRIPT LANGUAGE='JavaScript'>
+    				window.alert('Imóvel cadastrado com Sucesso!')
+    				window.location.href='../view/AreaProprietario.php';
+    				</SCRIPT>");
 ?>

@@ -117,9 +117,7 @@
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="text" class="form-control mb-30" placeholder="Entre com o CPF do proprietário" name="cpfProprietario" required><br>
                                 </div>
-								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input name="uploads[]" class="form-control mb-30" type=file multiple />
-                                </div>
+								
 
                                 <button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Atualizar</button>
                                 <button type="button" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cancelar</button><br>

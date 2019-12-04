@@ -15,9 +15,15 @@
                 $imovel->getAluguel().")";
 
             if ($conexao->query($sql) == TRUE) {
-                echo "<script>alert('Imovel salvo')</script>";
+                echo ("<SCRIPT LANGUAGE='JavaScript'>
+    				window.alert('Imóvel cadastrado com Sucesso!')
+    				window.location.href='../view/AreaProprietario.php';
+    				</SCRIPT>");
             } else {
-                echo "Erro ao cadastrar o imovel: <br>".$conexao->error;
+                echo ("<SCRIPT LANGUAGE='JavaScript'>
+    				window.alert('Imóvel cadastrado com Sucesso!')
+    				window.location.href='../view/CadastrarImovel.php';
+    				</SCRIPT>");
             }
         }
 
