@@ -114,9 +114,9 @@
                                     <input type="text" class="form-control mb-30" placeholder="Entre com o aluguel" name="aluguel" required><br>
                                 </div>
                               
-								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+								<!--<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input name="uploads[]" class="form-control mb-30" type=file multiple />
-                                </div>
+                                </div>-->
 
                                 <button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cadastrar</button>
                                 
