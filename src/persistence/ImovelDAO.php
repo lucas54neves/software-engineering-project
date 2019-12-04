@@ -1,4 +1,7 @@
 <?php
+    //inicia sessões
+    session_start();
+
     class ImovelDAO {
         function __construct() {}
 
@@ -19,13 +22,13 @@
         }
 
         function consultar($bairro, $conexao) {
-            $sql = "SELECT * FROM `Imovel` WHERE bairro = '" . $bairro . "'";
+            $sql = "SELECT * FROM `Imovel` WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "' AND bairro = '" . $bairro . "'";
             $resultado = $conexao->query($sql);
             return $resultado;
         }
 
         function consultarID($id, $conexao) {
-            $sql = "SELECT * FROM `Imovel` WHERE id = '" . $id . "'";
+            $sql = "SELECT * FROM `Imovel` WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "' AND id = '" . $id . "'";
             $resultado = $conexao->query($sql);
             return $resultado;
         }
@@ -38,7 +41,7 @@
                     `bairro`='" . $bairro . "',
                     `aluguel`=" . $aluguel . ",
                     `cpfProprietario`='" . $cpfProprietario . "'
-                WHERE `id`='" . $id ."'";
+                WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "' AND `id`='" . $id ."'";
 
             if ($conexao->query($sql) == TRUE) {
                 echo "<script>alert('Imovel atualizado')</script>";
@@ -48,7 +51,7 @@
         }
 
         function remover($conexao, $bairro) {
-            $sql = "DELETE FROM `Imovel` WHERE bairro = '" . $bairro . "'";
+            $sql = "DELETE FROM `Imovel` WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "' AND bairro = '" . $bairro . "'";
 
             if ($conexao->query($sql) == TRUE) {
                 
