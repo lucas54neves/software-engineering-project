@@ -21,6 +21,18 @@ gerenciadorJLS
       -> banco-dados.mwb
       -> script-criacao.sql
     -> diagrama-sequencial
+      -> contrato
+        -> atualizar-contrato.png
+        -> cadastrar-contrato.png
+        -> consultar-contrato.png
+        -> diagramas.asta
+        -> remover-contrato.png
+      -> imovel
+        -> atualizar-imovel.png
+        -> cadastrar-imovel.png
+        -> consultar-imovel.png
+        -> diagramas.asta
+        -> remover-imovel.png
     -> diagrama-classe
       -> diagrama-classe.asta
       -> diagrama-classe.png

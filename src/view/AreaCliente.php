@@ -1,6 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
+<?php 
+// Inicia sessões 
+session_start(); 
+ 
+ 
+// Verifica se existe os dados da sessão de login 
+if(!isset($_SESSION['cpfcliente'])) 
+{ 
+// Usuário não logado! Redireciona para a página de login 
+	header('location: ../view/AreaLogin.php');
+exit; 
+} 
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -8,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Cadastro de Imóvel</title>
+    <title>Área do Proprietário</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../images/logo.png"/>
@@ -19,6 +32,7 @@
 </head>
 
 <body>
+
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader"></div>
@@ -53,7 +67,14 @@
                             <div class="classynav">
                                 <ul id="nav">
                                     <li class="active"><a href="../index.php">Home</a></li>
+									<?php
+									
+									if(isset($_SESSION['cpfcliente'])){
+										echo "<li><a href=\" ../controller/sair.php\">logut</a></li>";
+									}
+									?>
                                     
+
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -71,7 +92,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumb-content text-center mt-100">
-                        <h2 class="page-title">Cadastro de Imóvel</h2>
+                        <h2 class="page-title">Área do Cliente</h2>
 
                     </div>
                 </div>
@@ -88,40 +109,23 @@
                 <div class="col-12">
                     <!-- Section Heading -->
                     <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
+                        <h2>Escolha a operação desejada</h2>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-12">
+                <div class="col-12" >
                     <!-- Form -->
-                    <div class="roberto-contact-form">
-                        <form action="../controller/CadastrarImovel.php" method="post">
-                            <div class="row">
-                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o ID" name="idImovel" required><br>
-                                </div>
-                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o logradouro" name="logradouro" required><br>
-                                </div>
-                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o numero" name="numero" required><br>
-                                </div>
-								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o bairro" name="bairro" required><br>
-                                </div>
-								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o aluguel" name="aluguel" required><br>
-                                </div>
-                              
-								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input name="uploads[]" class="form-control mb-30" type=file multiple />
-                                </div>
-
-                                <button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cadastrar</button>
-                                
-                            </div>
-                        </form>
+                    <div class="roberto-contact-form" style="text-align:center;">
+                        
+                            
+                            <form action="ConsultarImovel.php" method="post">
+    							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Consultar Imóvel</button>
+    						</form>
+                        
+                        <br>
+                        
                     </div>
                 </div>
             </div>

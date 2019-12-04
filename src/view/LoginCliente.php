@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Cadastro de Imóvel</title>
+    <title>Área do Proprietário</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../images/logo.png"/>
@@ -53,7 +53,9 @@
                             <div class="classynav">
                                 <ul id="nav">
                                     <li class="active"><a href="../index.php">Home</a></li>
-                                    
+                                    <li><a href="AreaCadastro.php">Cadastro</a></li>
+                                    <li><a href="AreaLogin.php">Login</a></li>
+
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -71,7 +73,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumb-content text-center mt-100">
-                        <h2 class="page-title">Cadastro de Imóvel</h2>
+                        <h2 class="page-title">Área de Login</h2>
 
                     </div>
                 </div>
@@ -88,40 +90,26 @@
                 <div class="col-12">
                     <!-- Section Heading -->
                     <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
+                        <h2>Login do Cliente</h2>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-12">
+                <div class="col-12" >
                     <!-- Form -->
-                    <div class="roberto-contact-form">
-                        <form action="../controller/CadastrarImovel.php" method="post">
-                            <div class="row">
-                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o ID" name="idImovel" required><br>
-                                </div>
-                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o logradouro" name="logradouro" required><br>
-                                </div>
-                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o numero" name="numero" required><br>
+                    <div class="roberto-contact-form" style="text-align:center;">
+                        <div class="">
+                            <form action="../controller/loginCliente.php" method="post">
+    							<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF" name="cpf" required><br>
                                 </div>
 								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o bairro" name="bairro" required><br>
+                                    <input type="password" class="form-control mb-30" placeholder="Entre com a senha" name="senha" required><br>
                                 </div>
-								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o aluguel" name="aluguel" required><br>
-                                </div>
-                              
-								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input name="uploads[]" class="form-control mb-30" type=file multiple />
-                                </div>
-
-                                <button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cadastrar</button>
-                                
-                            </div>
-                        </form>
+								<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Entrar</button>
+    						</form>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -53,8 +53,7 @@
                             <div class="classynav">
                                 <ul id="nav">
                                     <li class="active"><a href="../index.php">Home</a></li>
-                                    <li><a href="AreaLogin.php">Login</a></li>
-                                    <li><a href="AreaCadastro.php">Cadastro</a></li>
+                                    
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -108,6 +107,7 @@
                                 <button type="submit" style="margin: 0 15px;" value="Enviar" class="btn roberto-btn mt-15">Enviar</button>
                                 <button type="reset" style="margin: 0 15px;"  value="Limpar" class="btn roberto-btn mt-15">Limpar</button><br>
 						</form>
+						
                     </div>
                 </div>
             </div>
