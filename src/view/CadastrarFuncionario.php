@@ -111,7 +111,7 @@
                                     <input type="date" class="form-control mb-30" name="nascimento" required><br>
                                 </div>
 								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o email" name="email" required><br>
+                                    <input type="text" class="form-control mb-30" placeholder="Entre com o email" name="email" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
                                 </div>
 								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="password" class="form-control mb-30" placeholder="Entre com a senha" name="senha" required><br>

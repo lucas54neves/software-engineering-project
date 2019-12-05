@@ -109,13 +109,9 @@
 								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="text" class="form-control mb-30" placeholder="Entre com o CPF do proprietário" name="cpfProprietario" required pattern="[0-9]{11}"><br>
                                 </div>
-<<<<<<< HEAD
 								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="text" class="form-control mb-30" placeholder="Entre com o CPF do funcionário" name="cpfFuncionario" required pattern="[0-9]{11}"><br>
                                 </div>
-=======
-			
->>>>>>> 0c12d4936374ad2e9d9318da95b74e3fec07a801
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="text" class="form-control mb-30" placeholder="Entre com o CPF do cliente" name="cpfCliente" required pattern="[0-9]{11}"><br>
                                 </div>

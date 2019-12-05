@@ -17,6 +17,6 @@
 
     $clienteDAO = new ClienteDAO();
     $clienteDAO->salvar($cliente, $conexao);
-	
-	header('Location: ../index.html');
+
+	header('Location: ../index.php');
 ?>
