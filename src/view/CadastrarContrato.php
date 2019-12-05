@@ -117,7 +117,6 @@
                                 </div>
 
                                 <button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cadastrar</button>
-                                <button type="button" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cancelar</button><br>
                             </div>
                         </form>
                     </div>

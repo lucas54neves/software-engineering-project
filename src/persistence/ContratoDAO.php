@@ -60,9 +60,15 @@
                             	Cliente.nome = '" . $nomeCliente . "')";
             
             if ($conexao->query($sql) == TRUE) {
-                echo "<script>alert('Contrato removido')</script>";
+                echo ("<SCRIPT LANGUAGE='JavaScript'>
+    				window.alert('Contrato Removido!')
+    				window.location.href='../view/RemoverContrato.php';
+    				</SCRIPT>");
             } else {
-                echo "Erro ao atualizar o contrato: <br>".$conexao->error;
+                echo ("<SCRIPT LANGUAGE='JavaScript'>
+    				window.alert('Contrato não foi removido!')
+    				window.location.href='../view/RemoverContrato.php';
+    				</SCRIPT>");
             }
         }
     }

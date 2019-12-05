@@ -11,4 +11,6 @@
 
     $contratoDAO = new ContratoDAO();
     $contratoDAO->remover($nomeFuncionario, $nomeProprietario, $nomeCliente, $conexao);
+	
+	
 ?>
