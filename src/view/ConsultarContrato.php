@@ -53,8 +53,7 @@
                             <div class="classynav">
                                 <ul id="nav">
                                     <li class="active"><a href="../index.php">Home</a></li>
-                                    <li><a href="AreaLogin.php">Login</a></li>
-                                    <li><a href="AreaCadastro.php">Cadastro</a></li>
+                                    
                                 </ul>
                             </div>
                             <!-- Nav End -->
