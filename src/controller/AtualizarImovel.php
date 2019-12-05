@@ -144,7 +144,7 @@
 						</div>
 					</div>";
 		}
-		echo "<a href='../view/ConsultarImovel.php' style='margin: 0 125px;' class='btn roberto-btn mt-15'>Voltar</a><br>";
+		echo "<a href='../view/AreaProprietario.php' style='margin: 0 125px;' class='btn roberto-btn mt-15'>Voltar</a><br>";
 	} else {
         echo "<script>alert('Não tem imóvel desse bairro cadastrado')</script>";
 		}
