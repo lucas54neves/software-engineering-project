@@ -107,11 +107,13 @@
                                     <input type="text" class="form-control mb-30" placeholder="Entre com o ID do imóvel" name="idImovel" required><br>
                                 </div>
 								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF do proprietário" name="cpfProprietario" required><br>
+                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF do proprietário" name="cpfProprietario" required pattern="[0-9]{11}"><br>
                                 </div>
-			
+								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF do funcionário" name="cpfFuncionario" required pattern="[0-9]{11}"><br>
+                                </div>
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF do cliente" name="cpfCliente" required><br>
+                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF do cliente" name="cpfCliente" required pattern="[0-9]{11}"><br>
                                 </div>
 
                                 <button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Cadastrar</button>

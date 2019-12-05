@@ -53,7 +53,7 @@
                             <div class="classynav">
                                 <ul id="nav">
                                     <li class="active"><a href="../index.php">Home</a></li>
-                                    
+
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -102,12 +102,12 @@
                         <form action="..\controller\ConsultarImovel.php" method="post">
                             <div class="row">
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o bairro" name="bairro" ><br>
+                                    <input type="text" class="form-control mb-30" placeholder="Entre com o bairro" name="bairro" pattern="[A-Z]{45}"><br>
                                 </div>
                                 <button type="submit" style="margin: 0 15px;" value="Enviar" class="btn roberto-btn mt-15">Enviar</button>
                                 <button type="reset" style="margin: 0 15px;"  value="Limpar" class="btn roberto-btn mt-15">Limpar</button><br>
 						</form>
-						
+
                     </div>
                 </div>
             </div>

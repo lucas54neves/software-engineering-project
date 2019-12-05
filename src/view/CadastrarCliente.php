@@ -103,13 +103,13 @@
                         <form action="../controller/CadastrarCliente.php" method="post">
                             <div class="row">
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF" name="cpf" required><br>
+                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF" name="cpf" required pattern="[0-9]{11}"><br>
                                 </div>
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="text" class="form-control mb-30" placeholder="Entre com o nome" name="nome" required><br>
                                 </div>
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o email" name="email" required><br>
+                                    <input type="text" class="form-control mb-30" placeholder="Entre com o email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
                                 </div>
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="text" class="form-control mb-30" placeholder="Entre com a renda" name="renda" required><br>
