@@ -99,7 +99,7 @@
                         <form action="../controller/ConsultarContrato.php" method="post">
                             <div class="row">
 								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="ID do contrato" name="idContrato" required><br>
+                                    <input type="text" class="form-control mb-30" placeholder="ID do contrato" name="idContrato" required pattern="[0-9]{5}"><br>
                                 </div>
 
                                 <button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Consultar</button>

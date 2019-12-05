@@ -104,7 +104,7 @@
                                     <input type="text" class="form-control mb-30" placeholder="Entre com o nome" name="nome" required><br>
                                 </div>
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF" name="cpf" required><br>
+                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF" name="cpf" required pattern="[0-9]{11}"><br>
                                 </div>
 								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="date" class="form-control mb-30" name="nascimento" required><br>

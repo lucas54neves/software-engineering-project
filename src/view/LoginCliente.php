@@ -102,7 +102,7 @@
                         <div class="">
                             <form action="../controller/loginCliente.php" method="post">
     							<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF" name="cpf" required><br>
+                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF" name="cpf" required pattern="[0-9]{5}"><br>
                                 </div>
 								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="password" class="form-control mb-30" placeholder="Entre com a senha" name="senha" required><br>
