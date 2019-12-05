@@ -11,7 +11,10 @@
                 $contrato->getCpfFuncionario()."',".
                 $contrato->getAluguelContrato().")";
             if ($conexao->query($sql) == TRUE) {
-                echo "<script>alert('Contrato salvo')</script>";
+                echo("<SCRIPT LANGUAGE='JavaScript'>
+				window.alert('Contrato salvo!')
+				window.location.href='../view/AreaFuncionario.php';
+				</SCRIPT>");
             } else {
                 echo "Erro ao cadastrar o contrato: <br>".$conexao->error;
             }

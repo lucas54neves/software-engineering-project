@@ -53,8 +53,6 @@
                             <div class="classynav">
                                 <ul id="nav">
                                     <li class="active"><a href="../index.php">Home</a></li>
-                                    <li><a href="AreaLogin.php">Login</a></li>
-                                    <li><a href="AreaCadastro.php">Cadastro</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -111,9 +109,7 @@
 								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="text" class="form-control mb-30" placeholder="Entre com o CPF do proprietário" name="cpfProprietario" required><br>
                                 </div>
-								<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" class="form-control mb-30" placeholder="Entre com o CPF do funcionário" name="cpfFuncionario" required><br>
-                                </div>
+			
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="text" class="form-control mb-30" placeholder="Entre com o CPF do cliente" name="cpfCliente" required><br>
                                 </div>

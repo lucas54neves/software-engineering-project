@@ -28,13 +28,13 @@
         }
 
         function consultar($bairro, $conexao) {
-            $sql = "SELECT * FROM `Imovel` WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "' AND bairro = '" . $bairro . "'";
+            $sql = "SELECT * FROM `Imovel` WHERE bairro = '" . $bairro . "'";
             $resultado = $conexao->query($sql);
             return $resultado;
         }
 
         function consultarID($id, $conexao) {
-            $sql = "SELECT * FROM `Imovel` WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "' AND id = '" . $id . "'";
+            $sql = "SELECT * FROM `Imovel` WHERE  id = '" . $id . "'";
             $resultado = $conexao->query($sql);
             return $resultado;
         }
