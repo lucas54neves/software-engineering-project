@@ -40,9 +40,15 @@
                 WHERE `idContrato` = '" . $idContrato . "'";
 
             if ($conexao->query($sql) == TRUE) {
-                echo "<script>alert('Contrato atualizado')</script>";
+                echo ("<SCRIPT LANGUAGE='JavaScript'>
+    				window.alert('Contrato Atualizado!')
+    				window.location.href='../view/RemoverContrato.php';
+    				</SCRIPT>");
             } else {
-                echo "Erro ao atualizar o contrato: <br>".$conexao->error;
+                echo ("<SCRIPT LANGUAGE='JavaScript'>
+    				window.alert('O Contrato não existe, verifique o ID!')
+    				window.location.href='../view/RemoverContrato.php';
+    				</SCRIPT>");
             }
         }
 
