@@ -15,20 +15,31 @@
                 $imovel->getAluguel().")";
 
             if ($conexao->query($sql) == TRUE) {
-                echo "<script>alert('Imovel salvo')</script>";
+                echo ("<SCRIPT LANGUAGE='JavaScript'>
+    				window.alert('Imóvel cadastrado com Sucesso!')
+    				window.location.href='../view/AreaProprietario.php';
+    				</SCRIPT>");
             } else {
-                echo "Erro ao cadastrar o imovel: <br>".$conexao->error;
+                echo ("<SCRIPT LANGUAGE='JavaScript'>
+    				window.alert('Imóvel cadastrado com Sucesso!')
+    				window.location.href='../view/CadastrarImovel.php';
+    				</SCRIPT>");
             }
         }
 
         function consultar($bairro, $conexao) {
-            $sql = "SELECT * FROM `Imovel` WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "' AND bairro = '" . $bairro . "'";
+            $sql = "SELECT * FROM `Imovel` WHERE bairro = '" . $bairro . "'";
             $resultado = $conexao->query($sql);
             return $resultado;
         }
 
         function consultarID($id, $conexao) {
-            $sql = "SELECT * FROM `Imovel` WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "' AND id = '" . $id . "'";
+            $sql = "SELECT * FROM `Imovel` WHERE  id = '" . $id . "'";
+            $resultado = $conexao->query($sql);
+            return $resultado;
+        }
+		function consultarTodos($conexao) {
+            $sql = "SELECT * FROM `Imovel` WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "'";
             $resultado = $conexao->query($sql);
             return $resultado;
         }
@@ -44,32 +55,30 @@
                 WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "' AND `id`='" . $id ."'";
 
             if ($conexao->query($sql) == TRUE) {
-                echo "<script>alert('Imovel atualizado')</script>";
+                echo ("<SCRIPT LANGUAGE='JavaScript'>
+    				window.alert('Imóvel atualizado com sucesso!')
+    				window.location.href='../controller/AtualizarImovel.php';
+    				</SCRIPT>");
             } else {
                 echo "Erro ao atualizar o imovel: <br>".$conexao->error;
             }
         }
 
-        function remover($conexao, $bairro) {
-            $resultadoTemImovel = $this->consultar($bairro, $conexao);
+        function remover($conexao, $id) {
 
-            if ($resultadoTemImovel->num_rows > 0) {
-                $sql = "DELETE FROM `Imovel` WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "' AND bairro = '" . $bairro . "'";
+			$sql = "DELETE FROM `Imovel` WHERE cpfProprietario = '" . $_SESSION['cpfproprietario'] . "' AND id = '" . $id . "'";
 
-                if ($conexao->query($sql) == TRUE) {
-                    echo ("<SCRIPT LANGUAGE='JavaScript'>
-    				window.alert('Imovel(eis) removido(s)!')
-    				window.location.href='../view/RemoverImovel.php';
-    				</SCRIPT>");
-                } else {
-                    echo ("<SCRIPT LANGUAGE='JavaScript'>
-    				window.alert('Erro ao remover imovel!')
-    				window.location.href='../view/RemoverImovel.php';
-    				</SCRIPT>");
-                }
-            } else {
-                echo "<script>alert('Você não tem imóveis cadastrado nesse bairro')</script>";
-            }
+			if ($conexao->query($sql) == TRUE) {
+				echo ("<SCRIPT LANGUAGE='JavaScript'>
+				window.alert('Imovel(eis) removido(s)!')
+				window.location.href='../controller/RemoverImovel.php';
+				</SCRIPT>");
+			} else {
+				echo ("<SCRIPT LANGUAGE='JavaScript'>
+				window.alert('Erro ao remover imovel!')
+				window.location.href='../controller/RemoverImovel.php';
+				</SCRIPT>");
+			}
         }
     }
  ?>

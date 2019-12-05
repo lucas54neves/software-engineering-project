@@ -11,7 +11,7 @@
     $aluguelContrato = $_POST['aluguelContrato'];
     $idImovel = $_POST['idImovel'];
     $cpfProprietario = $_POST['cpfProprietario'];
-    $cpfFuncionario = $_POST['cpfFuncionario'];
+    $cpfFuncionario = $_SESSION['cpffuncionario'];
     $cpfCliente = $_POST['cpfCliente'];
 
     $conexao = new Connection();
@@ -35,15 +35,27 @@
                     $contratoDAO = new ContratoDAO();
                     $contratoDAO->salvar($contrato, $conexao);
                 } else {
-                    echo "<script>alert('Não existe um imóvel cadastrado com esse ID')</script>";
+                    echo("<SCRIPT LANGUAGE='JavaScript'>
+							window.alert('Não existe um imóvel cadastrado com esse ID!')
+							window.location.href='../view/AreaFuncionario.php';
+							</SCRIPT>");
                 }
             } else {
-                echo "<script>alert('Não existe um proprietário cadastrado com esse CPF')</script>";
+                echo("<SCRIPT LANGUAGE='JavaScript'>
+							window.alert('Não existe um proprietário cadastrado com esse CPF!')
+							window.location.href='../view/AreaFuncionario.php';
+							</SCRIPT>");
             }
         } else {
-            echo "<script>alert('Não existe um funcionário cadastrado com esse CPF')</script>";
+            echo ("<SCRIPT LANGUAGE='JavaScript'>
+							window.alert('Não existe um funcionário cadastrado com esse CPF!')
+							window.location.href='../view/AreaFuncionario.php';
+							</SCRIPT>");
         }
     } else {
-        echo "<script>alert('Não existe um cliente cadastrado com esse CPF')</script>";
+        echo ("<SCRIPT LANGUAGE='JavaScript'>
+							window.alert('Não existe um cliente cadastrado com esse CPF!')
+							window.location.href='../view/AreaFuncionario.php';
+							</SCRIPT>");
     }
  ?>

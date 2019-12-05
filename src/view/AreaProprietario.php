@@ -129,11 +129,11 @@ exit;
                         </div>
                         <br>
                         <div class="">
-                            <form action="AtualizarImovel.php" method="post">
+                            <form action="../controller/AtualizarImovel.php" method="post">
     							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Atualizar Imóvel</button>
     						</form>
                             <br>
-                            <form action="RemoverImovel.php" method="post">
+                            <form action="../controller/RemoverImovel.php" method="post">
     							<button type="submit" style="margin: 0 15px;" class="btn roberto-btn mt-15">Remover Imóvel</button>
     						</form>
                         </div>
